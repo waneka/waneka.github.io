@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Photo App</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="position--relative flex jc--c pt">
+      <div id="expanded-photo-container" class="flex jc--c overlay hide">
+        <div class="position--fixed mt" id="expanded-photo">
+          <img src="" class="expanded--image" id="expanded-image" />
+          <div class="flex image--overlay">
+            <div class="arrow--left" id="left-arrow"></div>
+            <div class="description" id="photo-description"></div>
+            <div class="arrow--right" id="right-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="thumbnails" class="grid"></div>
+    <div id="loader" class="flex jc--c hide">
+      <div class="floating-balls--container mt">
+        <div class="floating-ball floating-ball--1"></div>
+        <div class="floating-ball floating-ball--2"></div>
+        <div class="floating-ball floating-ball--3"></div>
+        <div class="floating-ball floating-ball--4"></div>
+        <div class="floating-ball floating-ball--5"></div>
+      </div>
+    </div>
+    <div class="flex jc--c mt mb+">
+      <button class="btn--default" id="fetchMorePhotos">Load more photos</button>
+    </div>
+  </div>
+  
+  <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
