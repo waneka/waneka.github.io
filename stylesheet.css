@@ -138,6 +138,14 @@ body {
   z-index: 10;
 }
 
+.expanded--photo {
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
 .expanded--image {
   width: 100%;
 }
@@ -283,4 +291,8 @@ body {
 
 .hide {
   display: none;
+}
+
+.color--error {
+  color: #c0392b;
 }
