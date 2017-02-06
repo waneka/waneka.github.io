@@ -116,14 +116,18 @@ var app = (function () {
     var photoRequest = new XMLHttpRequest();
     var endpoint;
     var responseData;
+    var errorMessage = document.getElementById('fetch-error');
 
     photoRequest.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE) {
         if (this.status === 200) {
           responseData = JSON.parse(this.responseText);
           handleResponseData(responseData);
+          errorMessage.classList.remove('is-showing');
+          errorMessage.classList.add('is-hiding');
         } else {
-          // display error
+          errorMessage.classList.remove('is-hiding');
+          errorMessage.classList.add('is-showing');
         }
       }
     }
